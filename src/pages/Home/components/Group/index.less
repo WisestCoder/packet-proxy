@@ -1,0 +1,24 @@
+@import '~antd/lib/style/themes/default.less';
+
+.group-container {
+	width: 240px;
+	height: 100%;
+	overflow-y: auto;
+	transform: translateX(-10px);
+
+	&-item {
+		&-label {
+			width: calc(100% - 50px);
+			margin-left: 10px;
+			display: inline-block;
+			vertical-align: middle;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		&-operator {
+			transform: translateX(12px);
+		}
+	}
+}

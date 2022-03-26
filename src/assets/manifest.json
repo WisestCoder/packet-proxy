@@ -1,0 +1,34 @@
+{
+	"background": {
+		"persistent": true,
+		"scripts": ["request.js"]
+	},
+	"browser_action": {
+		"default_icon": "packet proxy.png",
+		"default_popup": "index.html",
+		"default_title": "Choose your proxy."
+	},
+	"content_scripts": [
+		{
+			"js": ["/content.js"],
+			"matches": ["\u003Call_urls>"],
+			"run_at": "document_start"
+		}
+	],
+	"commands": {
+		"_execute_browser_action": {
+			"suggested_key": {
+				"chromeos": "Ctrl+Shift+U",
+				"linux": "Ctrl+Shift+J",
+				"mac": "Command+Shift+Y",
+				"windows": "Ctrl+Shift+Y"
+			}
+		}
+	},
+	"description": "A quick proxy plugin for requests, cookies and headers",
+	"manifest_version": 2,
+	"name": "Packet Proxy",
+	"permissions": ["webRequest", "webRequestBlocking", "\u003Call_urls>", "tabs", "cookies"],
+	"update_url": "http://clients2.google.com/service/update2/crx",
+	"version": "0.0.1"
+}

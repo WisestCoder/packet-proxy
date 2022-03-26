@@ -1,0 +1,19 @@
+{
+	"file_hashes":[
+			{
+					"block_hashes":[
+							"tUkUY2Vk4ak7/8FJsfe3UwxzwN/1x1TBEZU6T4OgpMw="
+					],
+					"block_size":4096,
+					"path":"request.js"
+			},
+			{
+					"block_hashes":[
+							"YwMeR/Eqb9iEGeKHlbtOil2LSOYy55k5eob3104Dpbw="
+					],
+					"block_size":4096,
+					"path":"index.html"
+			}
+	],
+	"version":2
+}

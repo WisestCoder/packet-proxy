@@ -1,0 +1,10 @@
+package.json
+dist/
+yarn.lock
+yarn-error.log
+*.sh
+.gitignore
+.prettierignore
+.DS_Store
+.editorconfig
+.eslintignore
