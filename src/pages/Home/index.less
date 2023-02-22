@@ -1,20 +1,25 @@
 body {
-	width: 800px;
-	height: 600px;
-  font-family: sans-serif;
 	margin: 0;
+  font-family: sans-serif;
 
 	#app {
+		width: 800px;
+		height: 600px;
+		padding: 16px;
 		overflow: hidden;
 		background: #f1f1f1;
-		width: 100%;
-		height: 100%;
-		padding: 16px;
 	}
 }
 
 .tab-container {
 	height: 100%;
+
+	> .ant-tabs-nav .ant-tabs-tab, .ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab {
+		background: #f1f1f1;
+		&.ant-tabs-tab-active {
+			background: #fff;
+		}
+	}
 
 	.ant-tabs-nav {
 		margin: 0;
@@ -24,14 +29,8 @@ body {
 		}
 	}
 	.ant-tabs-content-holder {
-		background-color: #fff;
 		padding: 10px;
-	}
-	> .ant-tabs-nav .ant-tabs-tab, .ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab {
-		background: #f1f1f1;
-		&.ant-tabs-tab-active {
-			background: #fff;
-		}
+		background-color: #fff;
 	}
 
 	.ant-tabs-content {
@@ -41,5 +40,6 @@ body {
 
 	.ant-tabs-tabpane {
 		height: 100%;
+		overflow-y: auto;
 	}
 }

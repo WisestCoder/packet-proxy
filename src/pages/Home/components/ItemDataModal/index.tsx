@@ -2,6 +2,7 @@ import React, { useCallback, useState, useEffect } from 'react'
 import { Modal } from 'antd'
 import { SchemaForm, createFormActions } from '@formily/antd'
 import BaseInput from '../BaseInput'
+import Replacer from '../Replacer'
 
 const actions = createFormActions()
 
@@ -29,30 +30,28 @@ const ItemModal = ({ visible, onOk, onCancel, mode, data }) => {
       <SchemaForm
         value={formValue}
         onChange={setFormValue}
-        labelCol={{ span: 5 }}
+        labelCol={{ span: 6 }}
         actions={actions}
-        components={{ BaseInput }}
+        components={{ BaseInput, Replacer }}
         schema={{
           type: 'object',
           properties: {
-            from: {
+            match: {
               'type': 'string',
-              'title': '源地址',
+              'title': '拦截path',
               'required': true,
               'x-component': 'BaseInput',
               'x-component-props': {
-                placeholder: '请输入源地址',
-                maxLength: 120,
+                placeholder: '请输入api',
               },
             },
-            to: {
+            overrideTxt: {
               'type': 'string',
-              'title': '代理地址',
+              'title': '替换response',
               'required': true,
-              'x-component': 'BaseInput',
+              'x-component': 'Replacer',
               'x-component-props': {
-                placeholder: '请输入代理地址',
-                maxLength: 120,
+                placeholder: '请输入需要替换的response',
               },
             },
           },

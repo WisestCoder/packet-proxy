@@ -41,8 +41,7 @@ const GroupDetail: FC<any> = ({ group, onAddItem, onExport, onCheckItem, onEditI
               />
             ),
           },
-          { title: '源地址', key: 'from', dataIndex: 'from' },
-          { title: '代理地址', key: 'to', dataIndex: 'to' },
+          { title: 'path', key: 'match', dataIndex: 'match' },
           {
             title: '操作',
             width: 120,
